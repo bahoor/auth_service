@@ -1,0 +1,12 @@
+services:
+  authentication_service:
+    build: .
+    container_name: authentication_service
+    ports:
+      - "5000:5000"
+    networks:
+      - microservices_network
+
+networks:
+  microservices_network:
+    external: true
